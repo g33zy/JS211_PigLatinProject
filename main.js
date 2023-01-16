@@ -12,8 +12,69 @@ const rl = readline.createInterface({
 
 
 const pigLatin = (word) => {
+    const vowels = ['a', 'e', 'i', 'o', 'u']
+    const lowerCase = word.toLowerCase().trim()
+    let vPosition = 0
+    // const testWord = 'Egg' = ['E', 'g', 'g']
+    // strings and arrays are iterable, const newArray not needed, if(vowels.includes(lowerCase[0])) { return lowerCase + 'yay'
+    const newArray =  Array.from(lowerCase)
+      if(vowels.includes(newArray[0])) {
+    const push = newArray.push('yay')
+        // console.log(push)
+        // console.log(newArray)
+    const join = newArray.join('')
+        return join
+      }
+    
+    else{
+      // Here we are testing the position of a vowel
+      for(let i = 1; i < lowerCase.length; i++) {
+        if(vowels.includes(lowerCase[i])) {
+          vPosition = i 
+          // T r e e
+          return lowerCase.slice(vPosition) + lowerCase.slice(0, vPosition) + 'ay'
+                                // e e 
+        }
 
-  // Your code here
+      
+
+      }
+
+    }
+
+
+
+
+    
+    // const consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y' ,'z']
+    //   if(consonants.inluces(newArray[0])) {
+
+    // const shift = newArray.shift()
+    // const splice = newArray.splice(3, 1, 'ay')
+    //   }
+    
+
+
+
+
+
+
+
+    // const testStr = 'Egg'
+    // const yay = 'yay'
+    //   if (word.startsWith(vowels)) {
+    //     return word.concat(word)
+    //   }
+
+    //   console.log(testStr)
+
+
+    
+    // 
+    // const complexWord = complexWord.trim().toLowerCase()
+
+
+  // Your code here , startsWith()
 
 }
 
