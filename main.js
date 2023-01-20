@@ -31,14 +31,16 @@ const pigLatin = (word) => {
       for(let i = 1; i < lowerCase.length; i++) {
         if(vowels.includes(lowerCase[i])) {
           vPosition = i 
+          break;
           // T r e e
-          return lowerCase.slice(vPosition) + lowerCase.slice(0, vPosition) + 'ay'
+          
                                 // e e 
         }
 
       
 
       }
+      return lowerCase.slice(vPosition) + lowerCase.slice(0, vPosition) + 'ay'
 
     }
 
